@@ -60,6 +60,7 @@ coverage/
 .cache
 .pytest_cache/
 htmlcov/
+.phpstan/
 
 # Build
 build/
