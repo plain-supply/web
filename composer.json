@@ -1,0 +1,41 @@
+{
+    "name": "plain-supply/web",
+    "autoload": {
+        "psr-4": {
+            "PlainSupply\\Web\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jeroen Gerits",
+            "email": "jeroen@gerits.email"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^12.2",
+        "phpstan/phpstan": "^2.1",
+        "friendsofphp/php-cs-fixer": "^3.84",
+        "rector/rector": "^2.1"
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse src --level=9",
+        "cs-check": "php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix",
+        "check": [
+            "@cs-check",
+            "@analyse",
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "test": "Run PHPUnit tests",
+        "analyse": "Run PHPStan static analysis",
+        "cs-check": "Check code style",
+        "cs-fix": "Fix code style",
+        "check": "Run all checks (style, analysis, tests)"
+    },
+    "require": {
+        "laravel/framework": "^12.20"
+    }
+}
