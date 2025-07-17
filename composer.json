@@ -2,7 +2,8 @@
     "name": "plain-supply/web",
     "autoload": {
         "psr-4": {
-            "PlainSupply\\Web\\": "src/"
+            "PlainSupply\\Web\\": "src/",
+            "App\\": "app/"
         }
     },
     "authors": [
